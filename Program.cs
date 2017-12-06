@@ -16,8 +16,7 @@ namespace ExemploCRUD
              string opt ="";
              BancoDados bd;
              Categoria ct;
-             
-                        
+                                    
              
              do             
              {
