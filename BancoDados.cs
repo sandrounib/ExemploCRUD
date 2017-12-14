@@ -309,7 +309,7 @@ namespace ExemploCRUD
                 comandos = new SqlCommand();
                 comandos.Connection= cn;
                 comandos.CommandType = CommandType.StoredProcedure;
-                comandos.CommandText = "CadClientes"; 
+                comandos.CommandText = "PCliente"; 
 
                 SqlParameter pnome = new SqlParameter("@nome",SqlDbType.VarChar,50);
                 pnome.Value = cliente.NomeCliente;
