@@ -18,3 +18,13 @@ c:\Users\Sandro Reis\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.Ass
 c:\Users\Sandro Reis\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.AssemblyInfo.cs
 c:\Users\Sandro Reis\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.dll
 c:\Users\Sandro Reis\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.pdb
+c:\Users\08929532845\Desktop\ExemploCrud\bin\Debug\netcoreapp2.0\ExemploCRUD.deps.json
+c:\Users\08929532845\Desktop\ExemploCrud\bin\Debug\netcoreapp2.0\ExemploCRUD.runtimeconfig.json
+c:\Users\08929532845\Desktop\ExemploCrud\bin\Debug\netcoreapp2.0\ExemploCRUD.runtimeconfig.dev.json
+c:\Users\08929532845\Desktop\ExemploCrud\bin\Debug\netcoreapp2.0\ExemploCRUD.dll
+c:\Users\08929532845\Desktop\ExemploCrud\bin\Debug\netcoreapp2.0\ExemploCRUD.pdb
+c:\Users\08929532845\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.csproj.CoreCompileInputs.cache
+c:\Users\08929532845\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.AssemblyInfoInputs.cache
+c:\Users\08929532845\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.AssemblyInfo.cs
+c:\Users\08929532845\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.dll
+c:\Users\08929532845\Desktop\ExemploCrud\obj\Debug\netcoreapp2.0\ExemploCRUD.pdb

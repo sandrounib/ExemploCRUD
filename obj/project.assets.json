@@ -1093,23 +1093,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sandro Reis\\.nuget\\packages\\": {},
+    "C:\\Users\\08929532845\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Sandro Reis\\Desktop\\ExemploCrud\\ExemploCRUD.csproj",
+      "projectUniqueName": "c:\\Users\\08929532845\\Desktop\\ExemploCrud\\ExemploCRUD.csproj",
       "projectName": "ExemploCRUD",
-      "projectPath": "c:\\Users\\Sandro Reis\\Desktop\\ExemploCrud\\ExemploCRUD.csproj",
-      "packagesPath": "C:\\Users\\Sandro Reis\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Sandro Reis\\Desktop\\ExemploCrud\\obj\\",
+      "projectPath": "c:\\Users\\08929532845\\Desktop\\ExemploCrud\\ExemploCRUD.csproj",
+      "packagesPath": "C:\\Users\\08929532845\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\08929532845\\Desktop\\ExemploCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sandro Reis\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\08929532845\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

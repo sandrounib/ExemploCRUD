@@ -22,7 +22,7 @@ namespace ExemploCRUD
             {
                 cn = new SqlConnection();//criar a conexão
                 cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;
-                                      user id=sa;password=sandro@123";//localização e permissão de acesso ao banco Papelaria
+                                      user id=sa;password=senai@123";//localização e permissão de acesso ao banco Papelaria
                 cn.Open();
                 comandos =  new SqlCommand();//instancia objeto comandos para ser usados comandos sql
                 comandos.Connection = cn;// Estabelece a relação entre comandos e cn
@@ -76,7 +76,7 @@ namespace ExemploCRUD
             try
             {
                 cn = new SqlConnection();//cria conexão
-                cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;user id=sa;password=sandro@123";
+                cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;user id=sa;password=senai@123";
                 cn.Open();
                 comandos =  new SqlCommand();//instancia objeto comandos
                 comandos.Connection = cn;// commandos.connection é para estabelecer a relação onde os comandos sql devem ser executados? R. no objeto cn que tem o banco usuario e senha
@@ -131,7 +131,7 @@ namespace ExemploCRUD
             try
             {
                 cn = new SqlConnection();
-                cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;user id=sa;password=sandro@123";
+                cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;user id=sa;password=senai@123";
                 cn.Open();
                 comandos =  new SqlCommand();//instancia objeto comandos
                 comandos.Connection = cn;// commandos.connection é para estabelecer a relação onde os comandos sql devem ser executados? R. no objeto cn que tem o banco usuario e senha
@@ -185,7 +185,7 @@ namespace ExemploCRUD
             try{                
                 cn = new SqlConnection();
                 cn.ConnectionString=@"Data source=.\sqlexpress;initial catalog=Papelaria;
-                                    user=sa;password=sandro@123";
+                                    user=sa;password=senai@123";
                 cn.Open();
                 comandos= new SqlCommand();
                 comandos.Connection = cn;
@@ -250,7 +250,7 @@ namespace ExemploCRUD
             {                
                 cn = new SqlConnection();
                 cn.ConnectionString=@"Data source=.\sqlexpress;initial catalog=Papelaria;
-                                    user=sa;password=sandro@123";
+                                    user=sa;password=senai@123";
                 cn.Open();
                 comandos= new SqlCommand();
                 comandos.Connection = cn;
@@ -298,13 +298,69 @@ namespace ExemploCRUD
             return lista;
         }
 
+        //
+         public List<Categoria> ListarCategorias(){            
+            List<Categoria> lista= new List<Categoria>();
+            try
+            {                
+                cn = new SqlConnection();
+                cn.ConnectionString=@"Data source=.\sqlexpress;initial catalog=Papelaria;
+                                    user=sa;password=senai@123";
+                cn.Open();
+                comandos= new SqlCommand();
+                comandos.Connection = cn;
+                comandos.CommandType = CommandType.Text;
+                //qual é o comando que eu vou utilizar? é o commandtext com esse comando abaixo
+                comandos.CommandText="SELECT * FROM Categorias";
+                /*a consulta é parametrizada então eu boto um parametro
+                não me preocupo qual tipo dele é passo o parametro, não pode ser o ExecuteNoQuery pois ele retorna um valor numérico
+                 não quero isso quero os dados que estão la na base nao vou retornar nenun dado
+                ele é um leitor de dados ExecuteReader - só um leitor  -- não retorna nada*/
+                
+                rd = comandos.ExecuteReader();  //executa o leitor e traga os valores e coloca dentro do rd
+                /*se tiver muitos dados quero que ele pegue a primeira linha e coloca na lista
+                pega a segunda e coloca na lista e assim por diante*/
+                while (rd.Read()) // enquanto rd for capaz de ler linhas/ conteúdo dentro de rd
+                {
+                    /*poderia ser assim mas, fazei igua abaixo
+                    categorias ct = new categorias(){
+                        idcategoria = rd.GetInt32(0),
+                        titulo = rd.GetString(1)
+                };
+                lista.Add(ct);
+                    }
+                     */
+                    
+                    lista.Add(new Categoria{//pega a lista e rotorna uma nova categoria que está lá como um meio de passagem
+                                IdCategoria=rd.GetInt32(0),//q tenho que fazer new pq a lista não é um simples lista ela é um novo objeto
+                                Titulo = rd.GetString(1)
+                                });                    
+                } 
+                comandos.Parameters.Clear();           
+
+            }
+            catch (SqlException se)
+            {
+                
+                throw new Exception("Erro ao tentar listar. "+se.Message);
+            }
+            catch (Exception ex){
+                throw new Exception("Erro inesperado "+ex.Message);
+            }
+            finally{
+                cn.Close();
+            }
+            return lista;
+        }
+
+
 
         public bool AdicionarCliente(Cliente cliente){
             bool rs = false;
             try
             {
                cn = new SqlConnection();
-                cn.ConnectionString=@"Data Source=.\sqlexpress;initial catalog=Papelaria;user id=sa;password=sandro@123";
+                cn.ConnectionString=@"Data Source=.\sqlexpress;initial catalog=Papelaria;user id=sa;password=senai@123";
                 cn.Open();
                 comandos = new SqlCommand();
                 comandos.Connection= cn;
@@ -346,6 +402,10 @@ namespace ExemploCRUD
             return rs;                 
                            
         }
+
+
+
+
     
     }
 }
